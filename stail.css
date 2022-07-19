@@ -1,0 +1,46 @@
+div{
+	height:600px;
+	background: #4b6cb7;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #182848, #4b6cb7);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #182848, #4b6cb7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	width:100%;
+	box-shadow:inset 2px 2px 5px 2px  #182848;
+	position:relative;
+	overflow:hidden;
+}
+.earth{
+	position:absolute;
+	width:40%;
+	left:30%;
+	top:5%;
+	z-index:2;
+	animation-name:rotate;
+	animation-duration:30s;
+	animation-iteration-count:infinite;
+}
+.moon{
+	position:absolute;
+	width:20%;
+	left:70%;
+	top:0;
+	z-index:3;
+	animation-name:move;
+	animation-duration:15s;
+	animation-iteration-count:infinite;
+}
+@keyframes move{
+	0%{transform:rotate(-360deg);}
+	50%{
+		top:70%;
+		left:10%;
+	}
+	100%{
+		z-index:1;
+	}
+}
+@keyframes rotate{
+	from{
+		transform:rotate(360deg);
+	}
+	to{}
+}
